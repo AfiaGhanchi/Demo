@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello-like App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="board">
+        <div class="column" id="todo">
+            <h2>To Do</h2>
+            <input type="text" id="new-task-todo" placeholder="New Task..." onkeypress="handleKeyPress(event, 'todo')">
+            <button onclick="addTask('todo')">Add Task</button>
+            <div class="task-list"></div>
+        </div>
+        <div class="column" id="in-progress">
+            <h2>In Progress</h2>
+            <input type="text" id="new-task-in-progress" placeholder="New Task..." onkeypress="handleKeyPress(event, 'in-progress')">
+            <button onclick="addTask('in-progress')">Add Task</button>
+            <div class="task-list"></div>
+        </div>
+        <div class="column" id="done">
+            <h2>Done</h2>
+            <input type="text" id="new-task-done" placeholder="New Task..." onkeypress="handleKeyPress(event, 'done')">
+            <button onclick="addTask('done')">Add Task</button>
+            <div class="task-list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
